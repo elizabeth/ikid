@@ -17,16 +17,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-                joke.isHidden = true
-        answer.isHidden = false
-
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+//    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        joke.hidden = true
+//        answer.isHidden = false
+//    }
 
 
     @IBAction func nextButton(_ sender: AnyObject) {
