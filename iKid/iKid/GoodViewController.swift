@@ -21,5 +21,8 @@ class GoodViewController: UIViewController {
     }
 
 
+    @IBAction func nextButton(_ sender: AnyObject) {
+    
+    }
 }
 
