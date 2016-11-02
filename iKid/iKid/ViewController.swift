@@ -1,5 +1,5 @@
 //
-//  GoodViewController.swift
+//  ViewController.swift
 //  iKid
 //
 //  Created by iGuest on 11/1/16.
@@ -8,11 +8,19 @@
 
 import UIKit
 
-class GoodViewController: UIViewController {
-
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var joke: UIView!
+    
+    @IBOutlet weak var answer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+                joke.isHidden = true
+        answer.isHidden = false
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,7 +30,8 @@ class GoodViewController: UIViewController {
 
 
     @IBAction func nextButton(_ sender: AnyObject) {
-    
+        answer.isHidden = false
+        joke.isHidden = true
     }
 }
 
