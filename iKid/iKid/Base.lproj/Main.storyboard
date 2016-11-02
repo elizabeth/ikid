@@ -205,7 +205,7 @@
         <!--Pun Joke-->
         <scene sceneID="kkL-tH-vjB">
             <objects>
-                <viewController title="Pun Joke" id="3V6-iQ-4yy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="punJoke" title="Pun Joke" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3V6-iQ-4yy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hME-qe-2ch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="584"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,7 +245,7 @@
         <!--Pun Answer-->
         <scene sceneID="F8x-y7-j8G">
             <objects>
-                <viewController title="Pun Answer" id="8X3-1C-xjd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="punAnswer" title="Pun Answer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8X3-1C-xjd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V65-xQ-YQc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="584"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,7 +274,7 @@
         <!--Dad Joke-->
         <scene sceneID="M9w-KE-zNF">
             <objects>
-                <viewController title="Dad Joke" id="hcD-lC-CsF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dadJoke" title="Dad Joke" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hcD-lC-CsF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OYH-pV-WmY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="584"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,7 +315,7 @@
         <!--Dad Answer-->
         <scene sceneID="IYm-r9-HY8">
             <objects>
-                <viewController title="Dad Answer" id="dkk-SC-6CC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dadAnswer" title="Dad Answer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dkk-SC-6CC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XhA-zZ-U6P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="584"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
