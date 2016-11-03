@@ -14,7 +14,7 @@
 		9D77194C1DC99DA8002FA113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D77194A1DC99DA8002FA113 /* LaunchScreen.storyboard */; };
 		9D7719571DC99DA8002FA113 /* iKidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7719561DC99DA8002FA113 /* iKidTests.swift */; };
 		9D7719621DC99DA8002FA113 /* iKidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7719611DC99DA8002FA113 /* iKidUITests.swift */; };
-		9DBBD9C31DCB2D1600A4398D /* DadJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBD9C21DCB2D1600A4398D /* DadJoke.swift */; };
+		9DBBD9C31DCB2D1600A4398D /* Jokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBD9C21DCB2D1600A4398D /* Jokes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		9D77195D1DC99DA8002FA113 /* iKidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iKidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7719611DC99DA8002FA113 /* iKidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iKidUITests.swift; sourceTree = "<group>"; };
 		9D7719631DC99DA8002FA113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DBBD9C21DCB2D1600A4398D /* DadJoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DadJoke.swift; sourceTree = "<group>"; };
+		9DBBD9C21DCB2D1600A4398D /* Jokes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jokes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				9D77193F1DC99DA8002FA113 /* AppDelegate.swift */,
 				9D7719411DC99DA8002FA113 /* ViewController.swift */,
-				9DBBD9C21DCB2D1600A4398D /* DadJoke.swift */,
+				9DBBD9C21DCB2D1600A4398D /* Jokes.swift */,
 				9D7719451DC99DA8002FA113 /* Main.storyboard */,
 				9D7719481DC99DA8002FA113 /* Assets.xcassets */,
 				9D77194A1DC99DA8002FA113 /* LaunchScreen.storyboard */,
@@ -264,7 +264,7 @@
 			files = (
 				9D7719401DC99DA8002FA113 /* AppDelegate.swift in Sources */,
 				9D7719421DC99DA8002FA113 /* ViewController.swift in Sources */,
-				9DBBD9C31DCB2D1600A4398D /* DadJoke.swift in Sources */,
+				9DBBD9C31DCB2D1600A4398D /* Jokes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
