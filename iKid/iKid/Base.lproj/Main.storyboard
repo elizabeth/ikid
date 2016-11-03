@@ -143,13 +143,6 @@
                                 <frame key="frameInset" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My sense of humor is still in alpha" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-xZ-p22">
-                                        <frame key="frameInset" minX="9.87%" minY="29.13%" width="80.27%" height="41.75%"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YD-cV-Y03" userLabel="nextJoke">
                                         <frame key="frameInset" minX="279" minY="564" width="88" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -161,6 +154,13 @@
                                             <action selector="nextButton:" destination="c8f-6L-u8P" eventType="touchUpInside" id="GOi-dN-9lB"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="knock knock" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-xZ-p22">
+                                        <frame key="frameInset" minX="13.87%" minY="44.34%" width="72.00%" height="11.49%"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3436117172" green="0.87602156399999997" blue="0.58740717170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -262,10 +262,10 @@
             </objects>
             <point key="canvasLocation" x="48.799999999999997" y="43.178410794602705"/>
         </scene>
-        <!--Dad Answer-->
+        <!--Dad Who-->
         <scene sceneID="IYm-r9-HY8">
             <objects>
-                <viewController storyboardIdentifier="dadAnswer" title="Dad Answer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dkk-SC-6CC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dadWho" title="Dad Who" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dkk-SC-6CC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GBx-MK-NUm"/>
                         <viewControllerLayoutGuide type="bottom" id="bdh-bB-tsa"/>
@@ -278,8 +278,8 @@
                                 <frame key="frameInset" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hopefully it'll soon get beta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQw-iF-01P">
-                                        <frame key="frameInset" minX="4.80%" minY="31.88%" width="90.13%" height="36.41%"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="who's there?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQw-iF-01P">
+                                        <frame key="frameInset" minX="14.93%" minY="44.34%" width="69.87%" height="11.33%"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
