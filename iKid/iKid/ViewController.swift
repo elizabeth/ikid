@@ -12,75 +12,58 @@ class ViewController: UIViewController {
     
     @IBOutlet var joke: UIView!
     @IBOutlet var answer: UIView!
-    
-    var type = ""
-    var knockJokes = ["knock knock", "who's there?", "aaa", "aaa who?", "aafiefojk"]
-    var knockCount = 0
-    
+    @IBOutlet weak var dadJokeButton: UIButton!
+    @IBOutlet weak var dadJokeLabel: UILabel!
+    private var type = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        type = title!
+        type = self.title!
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        if joke != nil {
-//            joke.isHidden = false
-//        }
-//        
-//        if answer != nil {
-//            answer.isHidden = true
-//        }
-        
-//        if joke != nil  && answer != nil {
-//            print("???")
-//            UIView.transition(from: answer, to: joke, duration: 0.1, options: .transitionFlipFromLeft, completion: nil)
-//        }
-    }
 
     @IBAction func nextButton(_ sender: AnyObject) {
-        print(type)
         if type != "Dad" {
-            UIView.transition(from: joke, to: answer, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
+            UIView.transition(from: joke, to: answer, duration: 1.0, options: [.showHideTransitionViews, .transitionFlipFromLeft], completion: { (_ : Bool) -> Void in
                 usleep(750000)
-                UIView.transition(from: self.answer, to: self.joke, duration: 1.0, options: .transitionFlipFromRight, completion: nil)
+                UIView.transition(from: self.answer, to: self.joke, duration: 1.0, options: [.showHideTransitionViews, .transitionFlipFromRight], completion: nil)
             })
         } else {
-            knockCount += 1
+            DadJoke.shared.dadCount += 1
+            let count = DadJoke.shared.dadCount
             
-            switch knockCount {
-            case 1:
-                UIView.transition(from: joke, to: answer, duration: 1.0, options: .transitionFlipFromLeft, completion: nil)
-            case 2:
-                UIView.transition(from: answer, to: joke, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
-                    let jokeLabel = self.joke.viewWithTag(5) as! UILabel
-                    jokeLabel.text = self.knockJokes[self.knockCount]
-                })
-            case 3:
-                UIView.transition(from: joke, to: answer, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
-                    let jokeAnswerLabel = self.joke.viewWithTag(7) as! UILabel
-                    jokeAnswerLabel.text = self.knockJokes[self.knockCount]
-                })
-            case 4:
-                UIView.transition(from: answer, to: joke, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
-                    let jokeLabel = self.joke.viewWithTag(5) as! UILabel
-                    jokeLabel.text = self.knockJokes[self.knockCount]
-                    let nextButton = self.joke.viewWithTag(6) as! UIButton
-                    nextButton.isHidden = true
-                })
+            self.dadJokeLabel.text = ""
+            UIView.transition(with: joke, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
+                    switch count {
+                    case 1:
+                        self.dadJokeLabel.text = DadJoke.shared.knockJokes[count]
+                    case 2:
+                        self.dadJokeLabel.text = DadJoke.shared.knockJokes[count]
+                    case 3:
+                        self.dadJokeLabel.text = DadJoke.shared.knockJokes[count]
+                    case 4:
+                        self.dadJokeLabel.text = DadJoke.shared.knockJokes[count]
+                    case 5:
+                        self.dadJokeLabel.text = DadJoke.shared.knockJokes[count]
+                        self.dadJokeButton.isHidden = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            UIView.transition(with: self.joke, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: {(_ : Bool) -> Void in
+                                self.dadJokeLabel.text = DadJoke.shared.knockJokes[0]
+                                self.dadJokeButton.isHidden = false
+                                DadJoke.shared.dadCount = 0
+                            })
+                        })
+                    default:
+                        self.dadJokeLabel.text = DadJoke.shared.knockJokes[0]
+                    }
                     
-                
-            default:
-                break
-            }
+                }
+            )
         }
     }
 }
