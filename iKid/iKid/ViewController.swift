@@ -53,10 +53,11 @@ class ViewController: UIViewController {
             let punJokes = Jokes.shared.punJokes
             
             self.punJokeLabel.text = ""
+            self.punJokeButton.isHidden = true
             UIView.transition(with: joke, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: {(_ : Bool) -> Void in
                 self.punJokeLabel.text = punJokes[1]
-                self.punJokeButton.isHidden = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    self.punJokeLabel.text = ""
                     UIView.transition(with: self.joke, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
                         self.punJokeLabel.text = punJokes[0]
                         self.punJokeButton.isHidden = false
