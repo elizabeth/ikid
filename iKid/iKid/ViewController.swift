@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var joke: UIView!
     @IBOutlet var answer: UIView!
+    
     var type = ""
     var knockJokes = ["knock knock", "who's there?", "aaa", "aaa who?", "aafiefojk"]
     var knockCount = 0
@@ -46,11 +47,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextButton(_ sender: AnyObject) {
-//        answer.isHidden = false
-//        joke.isHidden = true
         print(type)
         if type != "Dad" {
-            UIView.transition(from: joke, to: answer, duration: 1.0, options: .transitionFlipFromLeft, completion: { (finished: Bool) -> Void in
+            UIView.transition(from: joke, to: answer, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
                 usleep(750000)
                 UIView.transition(from: self.answer, to: self.joke, duration: 1.0, options: .transitionFlipFromRight, completion: nil)
             })
@@ -59,28 +58,26 @@ class ViewController: UIViewController {
             
             switch knockCount {
             case 1:
-                UIView.animate(withDuration: 0.7, delay: 1.0, options: .transitionFlipFromLeft, animations: {
-                print(self.joke)
-                }, completion: nil)
+                UIView.transition(from: joke, to: answer, duration: 1.0, options: .transitionFlipFromLeft, completion: nil)
             case 2:
-                UIView.animate(withDuration: 0.7, delay: 1.0, options: .transitionFlipFromLeft, animations: {
-                    //do shit
-                    }, completion: nil)
+                UIView.transition(from: answer, to: joke, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
+                    let jokeLabel = self.joke.viewWithTag(5) as! UILabel
+                    jokeLabel.text = self.knockJokes[self.knockCount]
+                })
             case 3:
-                UIView.animate(withDuration: 0.7, delay: 1.0, options: .transitionFlipFromLeft, animations: {
-                    //do shit
-                    }, completion: nil)
+                UIView.transition(from: joke, to: answer, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
+                    let jokeAnswerLabel = self.joke.viewWithTag(7) as! UILabel
+                    jokeAnswerLabel.text = self.knockJokes[self.knockCount]
+                })
             case 4:
-                UIView.animate(withDuration: 0.7, delay: 1.0, options: .transitionFlipFromLeft, animations: {
-                    //do shit
-                    }, completion: nil)
-//                UIView.animate(withDuration: 0.7, delay: 1.0, options: .transitionFlipFromLeft, animations: {
-//                    //do shit
-//                    }, completion: (_ : Bool) -> Void in {
-//                        UIView.animate(withDuration: 0.7, delay: 1.0, options: .transitionFlipFromRight, animations: {
-//                            //do shit
-//                            }, completion: nil)
-//                    })
+                UIView.transition(from: answer, to: joke, duration: 1.0, options: .transitionFlipFromLeft, completion: { (_ : Bool) -> Void in
+                    let jokeLabel = self.joke.viewWithTag(5) as! UILabel
+                    jokeLabel.text = self.knockJokes[self.knockCount]
+                    let nextButton = self.joke.viewWithTag(6) as! UIButton
+                    nextButton.isHidden = true
+                })
+                    
+                
             default:
                 break
             }
